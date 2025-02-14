@@ -175,6 +175,22 @@
                     android:src="@drawable/acctions"
                     android:layout_marginTop="7dp"/>
 
+<<<<<<< HEAD
+=======
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    app:cornerRadius="20dp"
+                    android:padding="6dp"
+                    android:src="@drawable/chatgpt_icon"
+                    android:contentDescription="@string/autentificacion_mf"
+                    android:scaleType="centerInside"
+                    android:background="@drawable/btn_redondeado_chat"
+                    android:adjustViewBounds="true" />
+
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
             </LinearLayout>
 
         </LinearLayout>

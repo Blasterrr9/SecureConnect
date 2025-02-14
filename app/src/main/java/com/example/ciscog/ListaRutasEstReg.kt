@@ -5,7 +5,10 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+<<<<<<< HEAD
 import android.view.ViewGroup
+=======
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.Toast
@@ -54,6 +57,7 @@ class ListaRutasEstReg : AppCompatActivity() {
         val usuarioRol = getUserRole(this) // Esta función debe obtener el rol del usuario
 
         btnRegistrar?.let { button ->
+<<<<<<< HEAD
             // Si el rol es "Usuario", oculta el botón de registro
             if (usuarioRol.equals("Usuario", ignoreCase = true)) {
                 button.visibility = View.GONE
@@ -64,6 +68,9 @@ class ListaRutasEstReg : AppCompatActivity() {
             } else {
                 button.visibility = View.VISIBLE
             }
+=======
+            button.visibility= if (usuarioRol.equals("Usuario", ignoreCase = true)) View.GONE else View.VISIBLE
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
         }
 
         // Carga los datos desde la base de datos y los muestra en el RecyclerView
@@ -96,7 +103,36 @@ class ListaRutasEstReg : AppCompatActivity() {
 
         // Listener para el botón de regresar, que regresa a la actividad anterior
         btnRegresar?.setOnClickListener {
+<<<<<<< HEAD
             finish()// Finaliza la actividad actual para evitar volver a ella con el botón de retroceso
+=======
+            // Realiza una consulta a la base de datos local para obtener el usuario
+            val db = DataBaseLITE(this)
+            val usuarioLocal = db.getUsuario(email ?: "")
+
+            val nombre = usuarioLocal?.nombreUs
+            val apellido = usuarioLocal?.apellidoUs
+            val rol = usuarioLocal?.rolUs
+
+            // Redirige a AdminActivity si es Administrador o UsuarioActivity si es Usuario
+            if (rol == "Administrador") {
+                val intent = Intent(this, AdminActivity::class.java).apply {
+                    putExtra("email", email)
+                    putExtra("nombre", nombre)
+                    putExtra("apellido", apellido)
+                }
+                startActivity(intent)
+                finish()// Finaliza la actividad actual para evitar volver a ella con el botón de retroceso
+            } else {
+                val intent = Intent(this, UsuarioActivity::class.java).apply {
+                    putExtra("email", email)
+                    putExtra("nombre", nombre)
+                    putExtra("apellido", apellido)
+                }
+                startActivity(intent)
+                finish()// Finaliza la actividad actual para evitar volver a ella con el botón de retroceso
+            }
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
         }
     }
 

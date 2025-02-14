@@ -89,6 +89,7 @@ class NatCRUD : AppCompatActivity() {
                 val nats = Nat(tipo,ipPriv,ipPub,dispositivo)
 
                 // Inserta los datos en la base de datos
+<<<<<<< HEAD
                 db.insertDataNAT(nats, email)
 
                 val idConfiguracion = db.getLastInsertedConfigId()
@@ -124,6 +125,19 @@ class NatCRUD : AppCompatActivity() {
                     dialog.show()
                 }
 
+=======
+                db.insertDataNAT(nats)
+
+                // Muestra un mensaje confirmando que los datos se registraron correctamente
+                Toast.makeText(this, "Los datos se registraron correctamente", Toast.LENGTH_SHORT).show()
+
+                // Redirige a la actividad que lista las configuraciones de NAT registradas
+                val intent = Intent(this, ListaNatReg::class.java).apply {
+                    putExtra("email", email)
+                }
+                startActivity(intent)
+                finish() // Finaliza la actividad actual
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
             }
         }
     }

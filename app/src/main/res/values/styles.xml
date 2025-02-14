@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="SpinnerTheme" parent="Theme.AppCompat.Light">
+<<<<<<< HEAD
         <!--<item name="android:spinnerDropDownItemStyle">@style/SpinnerDropDownItem</item> -->
         <item name="android:padding">4dp</item> <!-- Para coincidir con el EditText -->
         <!--<item name="android:layout_marginHorizontal">10dp</item>  Margen similar al EditText -->
@@ -11,3 +12,14 @@
 
 </resources>
 
+=======
+        <item name="android:spinnerDropDownItemStyle">@style/SpinnerDropDownItem</item>
+    </style>
+
+    <style name="SpinnerDropDownItem" parent="Widget.AppCompat.DropDownItem.Spinner">
+        <item name="android:textSize">22sp</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+</resources>
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))

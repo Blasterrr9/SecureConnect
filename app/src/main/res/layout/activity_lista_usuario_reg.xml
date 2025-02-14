@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+<<<<<<< HEAD
     tools:context=".ListaUsuarioReg">
 
     <!-- Imagen final en el FrameLayout para mantenerla en la esquina inferior derecha -->
@@ -19,6 +20,9 @@
             android:layout_marginEnd="0dp"
             android:layout_marginBottom="0dp" />
     </FrameLayout>
+=======
+    tools:context=".ListaUsuario">
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -108,10 +112,24 @@
                     android:backgroundTint="@color/green"
                     android:layout_marginTop="50dp"
                     android:layout_gravity="center"
+<<<<<<< HEAD
                     android:layout_marginBottom="180dp"
                     app:icon="@drawable/btn_registrar_icon"
                     app:iconSize="40dp" />
 
+=======
+                    app:icon="@drawable/btn_registrar_icon"
+                    app:iconSize="40dp" />
+
+                <!-- Imagen final -->
+                <ImageView
+                    android:layout_width="160dp"
+                    android:layout_height="180dp"
+                    android:layout_marginTop="100dp"
+                    android:src="@drawable/usuario_bg"
+                    android:layout_gravity="end" />
+
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
             </LinearLayout>
         </ScrollView>
 

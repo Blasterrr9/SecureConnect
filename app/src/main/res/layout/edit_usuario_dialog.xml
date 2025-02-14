@@ -63,12 +63,16 @@
             </LinearLayout>
 
             <!-- Campo para editar el Nombre -->
+<<<<<<< HEAD
 
             <!-- Campo para editar el Apellido -->
+=======
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
             <EditText
                 android:id="@+id/edittext_nombre_dialog"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+<<<<<<< HEAD
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="10dp"
                 android:textStyle="bold"
@@ -78,12 +82,26 @@
                 android:inputType="textPersonName"
                 android:padding="15dp" />
 
+=======
+                android:hint="@string/edit_nombre"
+                android:background="@drawable/edit_text_border"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:padding="15dp"
+                android:inputType="textPersonName"/>
+
+            <!-- Campo para editar el Apellido -->
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
             <EditText
                 android:id="@+id/edittext_apellido_dialog"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/edit_apellido"
+<<<<<<< HEAD
                 android:textStyle="bold"
+=======
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
                 android:background="@drawable/edit_text_border"
                 android:layout_marginTop="10dp"
                 android:layout_marginStart="20dp"
@@ -119,8 +137,12 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="20dp"
+<<<<<<< HEAD
                 android:background="@drawable/spinner_text_border"
                 android:theme="@style/SpinnerTheme"/>
+=======
+                android:background="@drawable/spinner_text_border"/>
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
 
             <!-- Campo para mostrar la fecha de creación -->
             <TextView

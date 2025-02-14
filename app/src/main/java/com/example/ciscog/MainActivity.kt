@@ -2,6 +2,7 @@ package com.example.ciscog
 
 import android.content.Context
 import android.content.Intent
+<<<<<<< HEAD
 import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -42,6 +43,19 @@ class MainActivity : AppCompatActivity() {
 
     private var btnResp: ImageButton? = null
 
+=======
+import android.os.Bundle
+import android.widget.Button
+import android.widget.EditText
+import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.auth.FirebaseAuth
+
+class MainActivity : AppCompatActivity() {
+    // Maneja la autenticación de Firebase
+    lateinit var autorizar: FirebaseAuth
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -56,12 +70,15 @@ class MainActivity : AppCompatActivity() {
         val btnIniciar = findViewById<Button>(R.id.btnIniciarSesion) // Botón para iniciar sesión
         val btnRecuperarContra = findViewById<Button>(R.id.btnRecuperarContra) // Botón para recuperar contraseña
 
+<<<<<<< HEAD
         btnResp = findViewById(R.id.btnResp)
 
         //Prueba
 
         pruebaConexion()
 
+=======
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
         // Define la acción al hacer clic en el botón de iniciar sesión
         btnIniciar.setOnClickListener {
             val emailText = email.text.toString()
@@ -75,6 +92,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+<<<<<<< HEAD
         btnResp?.setOnClickListener {
             android.app.AlertDialog.Builder(this)
                 .setTitle("Restauración de la Información")
@@ -96,6 +114,8 @@ class MainActivity : AppCompatActivity() {
                 .show()
         }
 
+=======
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
         // Define la acción al hacer clic en el botón de recuperar contraseña
         btnRecuperarContra?.setOnClickListener {
             if (email?.text.toString().isNotEmpty()){
@@ -113,6 +133,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+<<<<<<< HEAD
     // Registrador de resultado para manejar la selección de archivos
     private val openFileLauncher = registerForActivityResult(ActivityResultContracts.OpenDocument()) { uri: Uri? ->
         uri?.let {
@@ -169,6 +190,8 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+=======
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
     /*
     Función para manejar el inicio de sesión
     Recibe dos parámetros: email y contraseña
@@ -180,6 +203,7 @@ class MainActivity : AppCompatActivity() {
             if (task.isSuccessful) {
                 // Si el inicio de sesión es exitoso, obtiene el usuario actual y muestra un mensaje de bienvenida
                 val usuario = autorizar.currentUser
+<<<<<<< HEAD
                 manejarInicioSesionExitoso(usuario)
             } else {
                 if (task.exception is FirebaseAuthMultiFactorException) {
@@ -317,6 +341,49 @@ class MainActivity : AppCompatActivity() {
                     Toast.makeText(this,"Error al completar el inicio de sesión con MFA.",Toast.LENGTH_SHORT).show()
                 }
             }
+=======
+                val emailUsuario = usuario?.email
+
+                // Realiza una consulta a la base de datos local para obtener el usuario
+                val db = DataBaseLITE(this)
+                val usuarioLocal = db.getUsuario(emailUsuario ?: "")
+
+                if (usuarioLocal != null) {
+                    val nombre = usuarioLocal.nombreUs
+                    val apellido = usuarioLocal.apellidoUs
+                    val rol = usuarioLocal.rolUs
+
+                    Toast.makeText(baseContext, "Bienvenido", Toast.LENGTH_SHORT).show()
+
+                    //Almacenar el correo electrónico del usuario en las preferencias compartidas
+                    val sharedPreferences = getSharedPreferences("UserSession", Context.MODE_PRIVATE)
+                    val editor = sharedPreferences.edit()
+
+                    // Suponiendo que 'usuario' es el objeto de la clase Usuario que contiene todos los detalles
+                    editor.putString("userEmail", usuarioLocal.emailUs)  // Guarda el correo
+                    editor.putString("userRole", usuarioLocal.rolUs)     // Guarda el rol
+                    editor.apply()
+
+
+                    // Redirige a AdminActivity si es Administrador o UsuarioActivity si es Usuario
+                    if (rol == "Administrador") {
+                        mostrarInicioAdmin(emailUsuario, nombre, apellido)
+                    } else {
+                        mostrarInicioUsuario(emailUsuario, nombre, apellido)
+                    }
+
+                } else {
+                    Toast.makeText(baseContext, "Error: Usuario no encontrado en la base de datos local", Toast.LENGTH_SHORT).show()
+                }
+
+            } else {
+                // Si hay un error, muestra un mensaje de error
+                mostrarError()
+                Toast.makeText(baseContext, "Error de Contraseña o Email", Toast.LENGTH_SHORT)
+                    .show()
+            }
+        }
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
     }
 
     // Función para mostrar una advertencia al usuario

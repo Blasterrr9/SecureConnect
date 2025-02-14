@@ -7,7 +7,10 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.Spinner
+<<<<<<< HEAD
 import android.widget.TextView
+=======
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
@@ -99,6 +102,7 @@ class RutasEstCRUD : AppCompatActivity() {
                 val rutasEst = RutasEst(ipDestino, mascara, ipSalto, dispositivo)
 
                 // Inserta los datos en la base de datos
+<<<<<<< HEAD
                 db.insertDataRutaEst(rutasEst, email)
 
                 val idConfiguracion = db.getLastInsertedConfigId()
@@ -133,6 +137,19 @@ class RutasEstCRUD : AppCompatActivity() {
                     val dialog = builder.create()
                     dialog.show()
                 }
+=======
+                db.insertDataRutaEst(rutasEst)
+
+                // Muestra un mensaje confirmando que los datos se registraron correctamente
+                Toast.makeText(this, "Los datos se registraron correctamente", Toast.LENGTH_SHORT).show()
+
+                // Redirige a la actividad que lista las rutas registradas
+                val intent = Intent(this, ListaRutasEstReg::class.java).apply {
+                    putExtra("email", email)
+                }
+                startActivity(intent)
+                finish() // Finaliza la actividad actual
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
             }
 
         }

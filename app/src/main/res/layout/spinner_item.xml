@@ -3,6 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:textSize="18sp"
+<<<<<<< HEAD
     android:textStyle="bold"
+=======
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
     android:padding="10dp"
     android:textColor="@android:color/black"/>

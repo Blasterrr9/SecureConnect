@@ -18,18 +18,27 @@
             android:layout_height="140dp"
             android:background="@drawable/cuadro_azul"
             android:gravity="center">
+<<<<<<< HEAD
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/titulos_redondeados"
                 android:orientation="horizontal"
+=======
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/titulos_redondeados"
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp">
 
                 <ImageButton
                     android:id="@+id/return_btn"
                     android:layout_width="60dp"
+<<<<<<< HEAD
                     android:layout_height="60dp"
                     android:layout_gravity="center"
                     android:layout_marginStart="20dp"
@@ -40,26 +49,50 @@
                     android:scaleType="centerInside"
                     android:src="@drawable/atras"
                     app:cornerRadius="40dp" />
+=======
+                    android:layout_marginStart="20dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:padding="15dp"
+                    app:cornerRadius="40dp"
+                    android:src="@drawable/atras"
+                    android:contentDescription="@string/autentificacion_mf"
+                    android:scaleType="centerInside"
+                    android:background="@drawable/btn_redondeado"
+                    android:adjustViewBounds="true" />
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+<<<<<<< HEAD
                     android:gravity="center"
                     android:text="@string/registro_ruta_estatica"
                     android:textColor="@color/white"
                     android:textSize="23sp"
+=======
+                    android:text="@string/registro_ruta_estatica"
+                    android:textColor="@color/white"
+                    android:textSize="23sp"
+                    android:gravity="center"
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
                     android:textStyle="bold" />
             </LinearLayout>
         </LinearLayout>
 
         <Space
             android:layout_width="match_parent"
+<<<<<<< HEAD
             android:layout_height="35dp" />
+=======
+            android:layout_height="35dp"/>
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
 
         <EditText
             android:id="@+id/editText_IpDestino"
             android:layout_width="match_parent"
             android:layout_height="70dp"
+<<<<<<< HEAD
             android:layout_marginHorizontal="10dp"
             android:layout_marginBottom="30dp"
             android:background="@drawable/edit_text_border"
@@ -72,11 +105,26 @@
             android:textColorHint="@color/gray"
             android:textSize="22sp"
             android:textStyle="bold" />
+=======
+            android:background="@drawable/edit_text_border"
+            android:hint="@string/edit_ipDestino"
+            android:paddingHorizontal="20dp"
+            android:layout_marginHorizontal="10dp"
+            android:textColorHint="@color/gray"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:layout_marginBottom="30dp"
+            android:maxLength="15"
+            android:digits="0123456789."
+            android:singleLine="true"
+            android:inputType="numberDecimal"/>
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
 
         <EditText
             android:id="@+id/editText_Mascara"
             android:layout_width="match_parent"
             android:layout_height="70dp"
+<<<<<<< HEAD
             android:layout_marginHorizontal="10dp"
             android:layout_marginBottom="30dp"
             android:background="@drawable/edit_text_border"
@@ -89,11 +137,26 @@
             android:textColorHint="@color/gray"
             android:textSize="22sp"
             android:textStyle="bold" />
+=======
+            android:background="@drawable/edit_text_border"
+            android:hint="@string/edit_mascara"
+            android:paddingHorizontal="20dp"
+            android:layout_marginHorizontal="10dp"
+            android:textColorHint="@color/gray"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:layout_marginBottom="30dp"
+            android:maxLength="15"
+            android:digits="0123456789."
+            android:singleLine="true"
+            android:inputType="numberDecimal"/>
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
 
         <EditText
             android:id="@+id/editText_IpSalto"
             android:layout_width="match_parent"
             android:layout_height="70dp"
+<<<<<<< HEAD
             android:layout_marginHorizontal="10dp"
             android:layout_marginBottom="30dp"
             android:background="@drawable/edit_text_border"
@@ -106,31 +169,63 @@
             android:textColorHint="@color/gray"
             android:textSize="22sp"
             android:textStyle="bold" />
+=======
+            android:background="@drawable/edit_text_border"
+            android:hint="@string/edit_ipSalto"
+            android:paddingHorizontal="20dp"
+            android:layout_marginHorizontal="10dp"
+            android:textColorHint="@color/gray"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:layout_marginBottom="30dp"
+            android:maxLength="15"
+            android:digits="0123456789."
+            android:singleLine="true"
+            android:inputType="numberDecimal"/>
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+<<<<<<< HEAD
             android:layout_marginStart="20dp"
             android:layout_marginBottom="5dp"
             android:text="@string/edit_dispositivo"
             android:textSize="20sp"
             android:textStyle="bold" />
+=======
+            android:text="@string/edit_dispositivo"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="5dp"/>
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
 
         <Spinner
             android:id="@+id/spinner_dispositivo"
             android:layout_width="match_parent"
             android:layout_height="70dp"
+<<<<<<< HEAD
             android:layout_marginHorizontal="10dp"
             android:layout_marginBottom="30dp"
             android:background="@drawable/spinner_text_border"
             android:paddingHorizontal="10dp"
             android:theme="@style/SpinnerTheme"
             android:spinnerMode="dropdown" />
+=======
+            android:background="@drawable/spinner_text_border"
+            android:paddingHorizontal="20dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginBottom="30dp"
+            android:spinnerMode="dropdown"
+            android:popupTheme="@style/SpinnerTheme"/>
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
 
         <Button
             android:id="@+id/btn_anadir"
             android:layout_width="200dp"
             android:layout_height="70dp"
+<<<<<<< HEAD
             android:layout_gravity="center"
             android:backgroundTint="@color/green"
             android:text="@string/btn_anadir"
@@ -138,14 +233,29 @@
             android:textStyle="bold"
             app:icon="@drawable/btn_registrar_icon"
             app:iconSize="40dp" />
+=======
+            android:text="@string/btn_anadir"
+            android:backgroundTint="@color/green"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            app:icon="@drawable/btn_registrar_icon"
+            app:iconSize="40dp"/>
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
 
         <!-- Imagen final -->
         <ImageView
             android:layout_width="160dp"
             android:layout_height="180dp"
+<<<<<<< HEAD
             android:layout_gravity="end"
             android:layout_marginTop="20dp"
             android:src="@drawable/rutas_est_bg" />
+=======
+            android:src="@drawable/rutas_est_bg"
+            android:layout_gravity="end"
+            android:layout_marginTop="20dp"/>
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
 
     </LinearLayout>
 

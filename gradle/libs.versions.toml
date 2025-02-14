@@ -10,7 +10,10 @@ material = "1.12.0"
 activity = "1.9.0"
 constraintlayout = "2.1.4"
 firebaseAuthKtx = "23.0.0"
+<<<<<<< HEAD
 media3CommonKtx = "1.4.1"
+=======
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -22,7 +25,10 @@ material = { group = "com.google.android.material", name = "material", version.r
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
 firebase-auth-ktx = { group = "com.google.firebase", name = "firebase-auth-ktx", version.ref = "firebaseAuthKtx" }
+<<<<<<< HEAD
 androidx-media3-common-ktx = { group = "androidx.media3", name = "media3-common-ktx", version.ref = "media3CommonKtx" }
+=======
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

@@ -4,7 +4,10 @@ import android.annotation.SuppressLint
 import android.app.Activity
 import android.app.AlertDialog
 import android.content.Context
+<<<<<<< HEAD
 import android.content.Intent
+=======
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
 import android.os.Build
 import android.text.Editable
 import android.view.LayoutInflater
@@ -12,7 +15,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import androidx.recyclerview.widget.RecyclerView
+<<<<<<< HEAD
 import com.example.ciscog.ChatActivity
+=======
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
 import com.example.ciscog.DataBaseLITE
 import com.example.ciscog.R
 import com.example.ciscog.models.Nat
@@ -44,6 +50,7 @@ class NatAdapter(private val context: Activity, private var nat: ArrayList<Nat>)
         holder.textViewIpPub.text = listNat.ipPub
         holder.textViewDisp.text = listNat.dispositivo
 
+<<<<<<< HEAD
         // Redirigir a ChatActivity al hacer clic en el botón de chat
         holder.chatMenu.setOnClickListener {
             val mensajeRuta = """
@@ -61,6 +68,8 @@ class NatAdapter(private val context: Activity, private var nat: ArrayList<Nat>)
 
         }
 
+=======
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
         holder.imageViewMenu.setOnClickListener { popupMenu(it, listNat, position) } //Menu emergente
 
         // Verificar el rol del usuario
@@ -144,6 +153,7 @@ class NatAdapter(private val context: Activity, private var nat: ArrayList<Nat>)
                             listNat.ipPub = editTextIpPubDialog.text.toString()
                             listNat.dispositivo = spinnerDispoDialog.selectedItem.toString()
 
+<<<<<<< HEAD
                             if(db.isNATExist(listNat.tipo, listNat.ipPriv, listNat.ipPub, listNat.dispositivo)){
                                 Toast.makeText(context, "Esa Configuración de NAT ya existe", Toast.LENGTH_SHORT).show()
                             } else {
@@ -155,6 +165,16 @@ class NatAdapter(private val context: Activity, private var nat: ArrayList<Nat>)
                                     Toast.makeText(context, "Error al actualizar los datos de la configuración NAT", Toast.LENGTH_SHORT).show()
                                 }
                             }
+=======
+                            // Actualizar el registro en la base de datos
+                            if (db.updateDataNAT(listNat)) {
+                                notifyItemChanged(position) // Notifica al adaptador que el ítem ha cambiado
+                                Toast.makeText(context, "Los datos de la configuración NAT se actualizaron correctamente", Toast.LENGTH_SHORT).show()
+                            } else {
+                                Toast.makeText(context, "Error al actualizar los datos de la configuración NAT", Toast.LENGTH_SHORT).show()
+                            }
+
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
                             dialog.dismiss() // Cierra el cuadro de diálogo
                         }
                         .setNegativeButton("Cancelar") { dialog, _ ->
@@ -253,6 +273,9 @@ class NatAdapter(private val context: Activity, private var nat: ArrayList<Nat>)
         val textViewIpPub: TextView = view.findViewById(R.id.textview_ipPub)
         val textViewDisp: TextView = view.findViewById(R.id.textview_dispositivo)
         val imageViewMenu: ImageView = view.findViewById(R.id.imageview_menu)
+<<<<<<< HEAD
         val chatMenu: ImageButton = view.findViewById(R.id.chat_btn)
+=======
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
     }
 }

@@ -1,5 +1,6 @@
 package com.example.ciscog
 
+<<<<<<< HEAD
 import android.annotation.SuppressLint
 import android.app.AlertDialog
 import android.content.Intent
@@ -28,10 +29,20 @@ import java.io.InputStreamReader
 import java.io.PrintWriter
 import java.net.Socket
 import java.util.concurrent.TimeUnit
+=======
+import android.content.Intent
+import android.os.Bundle
+import android.widget.Button
+import android.widget.TextView
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.auth.FirebaseAuth
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
 
 class AdminActivity : AppCompatActivity() {
     private var btnRutasEst: Button? = null
     private var btnNat: Button? = null
+<<<<<<< HEAD
     private var btnEigrp: Button? = null
     private var btnOspf: Button? = null
     private var btnVlan: Button? = null
@@ -44,16 +55,22 @@ class AdminActivity : AppCompatActivity() {
     private var btnRespNube: AppCompatImageButton? = null
 
     private var btnAutenticacion: AppCompatImageButton? = null
+=======
+    private var btnUsuario: Button? = null
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
     private var btnCerrarSesion: Button? = null
     private var tvNombreUsuario: TextView? = null
     private var tvCorreoUsuario: TextView? = null
 
     private lateinit var auth: FirebaseAuth
+<<<<<<< HEAD
     private lateinit var verificationId: String
     private var forceResendingToken: PhoneAuthProvider.ForceResendingToken? = null
     private lateinit var multiFactorSession: MultiFactorSession
 
     private lateinit var phone: String
+=======
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -73,6 +90,7 @@ class AdminActivity : AppCompatActivity() {
     private fun init(email: String, nombre: String, apellido: String) {
         btnNat = findViewById(R.id.btnNat)
         btnRutasEst = findViewById(R.id.btnRutasEst)
+<<<<<<< HEAD
         btnEigrp = findViewById(R.id.btnEigrp)
         btnOspf = findViewById(R.id.btnOspf)
         btnVlan = findViewById(R.id.btnVlans)
@@ -85,18 +103,26 @@ class AdminActivity : AppCompatActivity() {
         btnRespNube = findViewById(R.id.btnRespaldoNube)
 
         btnAutenticacion = findViewById(R.id.btnMFA)
+=======
+        btnUsuario = findViewById(R.id.btnUsuarios)
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
         btnCerrarSesion = findViewById(R.id.cerrarSesion)
         tvCorreoUsuario = findViewById(R.id.correo_usuario)
         tvCorreoUsuario?.text = email
         tvNombreUsuario = findViewById(R.id.nombre_usuario)
         val nombreCompleto = "$nombre $apellido"
         tvNombreUsuario?.text = nombreCompleto
+<<<<<<< HEAD
 
 
     }
 
 
 
+=======
+    }
+
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
     private fun listeners(email: String, nombre: String, apellido: String) {
         btnRutasEst?.setOnClickListener {
             val intent = Intent(this, ListaRutasEstReg::class.java).apply {
@@ -120,6 +146,7 @@ class AdminActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+<<<<<<< HEAD
         btnEigrp?.setOnClickListener {
             val intent = Intent(this, ListaEigrpReg::class.java).apply {
                 putExtra("email", email)
@@ -162,6 +189,8 @@ class AdminActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+=======
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
         btnUsuario?.setOnClickListener {
             val intent = Intent(this, ListaUsuarioReg::class.java).apply {
                 putExtra("email", email)
@@ -169,6 +198,7 @@ class AdminActivity : AppCompatActivity() {
                 putExtra("apellido", apellido)
             }
             startActivity(intent)
+<<<<<<< HEAD
             finish()// Finaliza la actividad actual para evitar volver a ella con el botón de retroceso
         }
 
@@ -425,4 +455,10 @@ class AdminActivity : AppCompatActivity() {
             }
     }
 
+=======
+
+        }
+
+    }
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
 }

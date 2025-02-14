@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
+<<<<<<< HEAD
     <uses-permission android:name="android.permission.RECEIVE_SMS" />
     <uses-permission android:name="android.permission.READ_SMS" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -13,6 +14,11 @@
 
     <uses-feature android:name="android.hardware.telephony" android:required="false" />
 
+=======
+    <!-- <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> -->
+    <!-- <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> -->
+
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -30,6 +36,7 @@
             android:name=".ListaNatReg"
             android:exported="false" />
         <activity
+<<<<<<< HEAD
             android:name=".ListaEigrpReg"
             android:exported="false" />
         <activity
@@ -78,6 +85,14 @@
             android:name=".AclCRUD"
             android:exported="false" />
         <activity
+=======
+            android:name=".ListaUsuarioReg"
+            android:exported="false" />
+        <activity
+            android:name=".NatCRUD"
+            android:exported="false" />
+        <activity
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
             android:name=".AdminActivity"
             android:exported="false" />
         <activity
@@ -90,6 +105,7 @@
             android:name=".UsuarioCRUD"
             android:exported="false" />
         <activity
+<<<<<<< HEAD
             android:name=".RespaldoLocal"
             android:exported="false" />
         <activity
@@ -99,6 +115,8 @@
             android:name=".ChatActivity"
             android:exported="false" />
         <activity
+=======
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

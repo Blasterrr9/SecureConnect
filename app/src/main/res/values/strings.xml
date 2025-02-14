@@ -7,16 +7,26 @@
     <string name="btn_ingresar">INICIAR SESIÓN</string>
     <string name="cerrar_sesion">Cerrar Sesión</string>
     <string name="recuperar_contra">RECUPERAR CONTRASEÑA</string>
+<<<<<<< HEAD
     <string name="autentificacion_mf">Autentificación MFA</string>
     <string name="btn_usuarios">Usuarios</string>
     <string name="btn_eigrp">EIGRP</string>
     <string name="btn_acls">ACL</string>
     <string name="btn_rutasEstaticas">Rutas\nEstáticas</string>
     <string name="btn_vlans">VLAN</string>
+=======
+    <string name="autentificacion_mf">Autentificación MF</string>
+    <string name="btn_usuarios">Usuarios</string>
+    <string name="btn_eigrp">EIGRP</string>
+    <string name="btn_acls">ACLs</string>
+    <string name="btn_rutasEstaticas">Rutas\nEstáticas</string>
+    <string name="btn_vlans">VLANs</string>
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
     <string name="btn_ospf">OSPF</string>
     <string name="btn_stp">STP</string>
     <string name="btn_nat">NAT</string>
     <string name="registro_nat">REGISTRO NAT</string>
+<<<<<<< HEAD
     <string name="registro_eigrp">REGISTRO EIGRP</string>
     <string name="registro_ospf">REGISTRO OSPF</string>
     <string name="registro_vlan">REGISTRO VLAN</string>
@@ -57,20 +67,43 @@
     <string name="edit_area">Área</string>
     <string name="edit_red">Red</string>
     <string name="edit_wildcard">Wildcard</string>
+=======
+    <string name="registro_usuario">REGISTRO USUARIO</string>
+    <string name="lista_nat">LISTA NAT</string>
+    <string name="lista_rutasEst">LISTA RUTAS ESTÁTICAS</string>
+    <string name="lista_usuario">LISTA USUARIO</string>
+    <string name="lista_bd">RESPALDO DE LA BD</string>
+    <string name="btn_anadir">AÑADIR</string>
+    <string name="registro_ruta_estatica">REGISTRO RUTA ESTÁTICA</string>
+    <string name="edit_tipo">Tipo</string>
+    <string name="edit_nombre">Nombre</string>
+    <string name="edit_apellido">Apellido</string>
+    <string name="edit_contrasena">Contraseña</string>
+    <string name="edit_rol">Rol</string>
+    <string name="edit_ippriv">Dirección IP Privada</string>
+    <string name="edit_ippub">Dirección IP Publica</string>
+    <string name="edit_dispositivo">Dispositivo</string>
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
     <string name="btn_registrar">REGISTRAR</string>
     <string name="edit_ipDestino">IP Destino</string>
     <string name="edit_mascara">Máscara</string>
     <string name="edit_ipSalto">IP Salto</string>
+<<<<<<< HEAD
     <string name="edit_prioridad">Prioridad</string>
     <string name="edit_modo">Modo</string>
     <string name="edit_vlan_id">VLAN ID</string>
+=======
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
     <string name="regresar"><![CDATA[<]]></string>
     <string name="respaldodb">Respaldo y\nRestauración</string>
     <string name="generar_reportes">Generar\nReportes</string>
     <string name="respaldo_nube">Respaldo en la Nube</string>
     <string name="user_example_com">user@example.com</string>
     <string name="fecha_usuario">Fecha de Creación</string>
+<<<<<<< HEAD
     <string name="chat_title">ASITENTE VIRTUAL GPT</string>
     <string name="numero_tel">Número Telefónico</string>
 
+=======
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
 </resources>

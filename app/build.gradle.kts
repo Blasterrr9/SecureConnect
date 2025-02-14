@@ -37,17 +37,27 @@ android {
 }
 
 dependencies {
+<<<<<<< HEAD
+=======
+
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
     implementation(libs.firebase.auth.ktx)
+<<<<<<< HEAD
 
+=======
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     implementation(platform("com.google.firebase:firebase-bom:33.1.2"))
     implementation("com.google.firebase:firebase-analytics")
+<<<<<<< HEAD
     implementation("com.squareup.okhttp3:okhttp:4.10.0")
+=======
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
 }

@@ -52,7 +52,10 @@
                 android:gravity="center">
 
                 <Button
+<<<<<<< HEAD
                     android:id="@+id/btn_respaldo"
+=======
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:backgroundTint="@color/white"
@@ -85,7 +88,10 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical">
                 <Button
+<<<<<<< HEAD
                     android:id="@+id/btn_reportes"
+=======
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:backgroundTint="@color/white"
@@ -141,7 +147,10 @@
                 android:layout_gravity="center"
                 android:orientation="vertical">
                 <ImageButton
+<<<<<<< HEAD
                     android:id="@+id/btnMFA"
+=======
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
                     android:layout_width="match_parent"
                     android:layout_height="98dp"
                     android:layout_gravity="center"
@@ -170,7 +179,10 @@
                 android:layout_gravity="center"
                 android:orientation="vertical">
                 <ImageButton
+<<<<<<< HEAD
                     android:id="@+id/btnRespaldoNube"
+=======
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -196,7 +208,11 @@
         <GridLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+<<<<<<< HEAD
             android:layout_marginTop="10dp"
+=======
+            android:layout_marginTop="30dp"
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
             android:columnCount="2"
             android:rowCount="4"
             android:useDefaultMargins="true">
@@ -326,6 +342,7 @@
                 app:iconTint="@color/black"
                 android:layout_columnWeight="1"/>
 
+<<<<<<< HEAD
 
         </GridLayout>
 
@@ -359,5 +376,9 @@
 
 
 
+=======
+        </GridLayout>
+
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
     </LinearLayout>
 </FrameLayout>

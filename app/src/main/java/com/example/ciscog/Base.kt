@@ -4,6 +4,7 @@ import android.content.ContentValues
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
+<<<<<<< HEAD
 import android.net.Uri
 import android.os.Environment
 import android.util.Log
@@ -25,11 +26,21 @@ import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 import java.time.Instant
 import java.time.ZoneId
+=======
+import android.widget.Toast
+import com.example.ciscog.models.Nat
+import com.example.ciscog.models.RutasEst
+import com.example.ciscog.models.Usuario
+
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
 
 const val DATABASE_NAME ="appCisco1"
 const val COL_ID = "id"
 const val COL_DISPOSITIVO = "dispositivo"
+<<<<<<< HEAD
 
+=======
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
 //Variables usuario
 const val TABLE_USUARIO="Usuario"
 const val COL_NOMBRE = "nombre_usuario"
@@ -38,6 +49,10 @@ const val COL_EMAIL = "email_usuario"
 const val COL_CONTRASENA = "contrasena_usuario"
 const val COL_ROL = "rol_usuario"
 const val COL_FECHA = "fecha_usuario"
+<<<<<<< HEAD
+=======
+
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
 //Variables nat
 const val TABLE_NAT="NAT"
 const val COL_TIPO = "tipoNat"
@@ -48,6 +63,7 @@ const val TABLE_RUTASEST = "RutaEstatica"
 const val COL_IPDESTINO = "ip_destino"
 const val COL_MASCARA = "mascara" 
 const val COL_IPSALTO = "ip_salto"
+<<<<<<< HEAD
 //Variables eigrp
 const val TABLE_EIGRP = "EIGRP"
 const val COL_ASNUMBER = "as_number"
@@ -296,11 +312,52 @@ class DataBaseLITE(var context: Context) : SQLiteOpenHelper(context,DATABASE_NAM
         val db = this.writableDatabase
         val usuario = getUsuario(email)
         val dispositivo = getDispositivo(nat.dispositivo)
+=======
+
+class DataBaseLITE(var context: Context) : SQLiteOpenHelper(context,DATABASE_NAME,null,1) {
+    override fun onCreate(db: SQLiteDatabase?) {
+
+        val createTableUsuario = "CREATE TABLE " + TABLE_USUARIO + " (" +
+                COL_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
+                COL_NOMBRE + " VARCHAR(40)," +
+                COL_APELLIDO + " VARCHAR(40)," +
+                COL_EMAIL + " VARCHAR(100)," +
+                COL_CONTRASENA + " VARCHAR(255)," +
+                COL_ROL + " VARCHAR(40)," +
+                COL_FECHA + " TIMESTAMP DEFAULT CURRENT_TIMESTAMP)"
+
+        val createTableNAT = "CREATE TABLE " + TABLE_NAT + " (" +
+                COL_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
+                COL_TIPO + " VARCHAR(40)," +
+                COL_IPPRIVADA + " VARCHAR(40)," +
+                COL_IPPUBLICA + " VARCHAR(40)," +
+                COL_DISPOSITIVO + " VARCHAR(40))"
+
+        val createTableRutaEst = "CREATE TABLE " + TABLE_RUTASEST + " (" +
+                COL_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
+                COL_IPDESTINO + " VARCHAR(40)," +
+                COL_IPSALTO + " VARCHAR(40)," +
+                COL_MASCARA + " VARCHAR(40)," +
+                COL_DISPOSITIVO + " VARCHAR(40))"
+
+        db?.execSQL(createTableNAT)
+        db?.execSQL(createTableRutaEst)
+        db?.execSQL(createTableUsuario)
+    }
+    override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
+
+    }
+    
+    //Funciones para NAT
+    fun insertDataNAT(nat : Nat) {
+        val db = this.writableDatabase
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
         val cv = ContentValues()
         cv.put(COL_TIPO, nat.tipo)
         cv.put(COL_IPPRIVADA, nat.ipPriv)
         cv.put(COL_IPPUBLICA, nat.ipPub)
         cv.put(COL_DISPOSITIVO, nat.dispositivo)
+<<<<<<< HEAD
 
         db.beginTransaction()
 
@@ -345,6 +402,13 @@ class DataBaseLITE(var context: Context) : SQLiteOpenHelper(context,DATABASE_NAM
             db.endTransaction()
         }
 
+=======
+        val result = db.insert(TABLE_NAT, null, cv)
+        if (result == -1.toLong())
+            Toast.makeText(context, "Fallo al Insertar NAT", Toast.LENGTH_SHORT).show()
+        else
+            Toast.makeText(context, "NAT Insertada Correctamente", Toast.LENGTH_SHORT).show()
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
     }
     
     fun readDataNAT() : MutableList<Nat>{
@@ -370,6 +434,7 @@ class DataBaseLITE(var context: Context) : SQLiteOpenHelper(context,DATABASE_NAM
 
     fun updateDataNAT(nat: Nat): Boolean {
         val db = this.writableDatabase
+<<<<<<< HEAD
         val auth = FirebaseAuth.getInstance()
         val email = auth.currentUser?.email
         val usuario = getUsuario(email!!)
@@ -429,6 +494,17 @@ class DataBaseLITE(var context: Context) : SQLiteOpenHelper(context,DATABASE_NAM
     }
 
 
+=======
+        val contentValues = ContentValues()
+        contentValues.put(COL_TIPO, nat.tipo)
+        contentValues.put(COL_IPPRIVADA, nat.ipPriv)
+        contentValues.put(COL_IPPUBLICA, nat.ipPub)
+        contentValues.put(COL_DISPOSITIVO, nat.dispositivo)
+        val result = db.update(TABLE_NAT, contentValues, "ID = ?", arrayOf(nat.id.toString()))
+        return result != -1
+    }
+
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
     fun deleteDataNAT(id: Int): Int {
         val db = this.writableDatabase
         return db.delete(TABLE_NAT, "ID = ?", arrayOf(id.toString()))
@@ -445,15 +521,21 @@ class DataBaseLITE(var context: Context) : SQLiteOpenHelper(context,DATABASE_NAM
     }
 
     //Funciones para Rutas Estáticas
+<<<<<<< HEAD
     fun insertDataRutaEst(rutaEst : RutasEst, email: String) {
         val db = this.writableDatabase
         val usuario = getUsuario(email)
         val dispositivo = getDispositivo(rutaEst.dispositivo)
+=======
+    fun insertDataRutaEst(rutaEst : RutasEst) {
+        val db = this.writableDatabase
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
         val cv = ContentValues()
         cv.put(COL_IPDESTINO, rutaEst.ipDestino)
         cv.put(COL_IPSALTO, rutaEst.ipSalto)
         cv.put(COL_MASCARA, rutaEst.mascara)
         cv.put(COL_DISPOSITIVO, rutaEst.dispositivo)
+<<<<<<< HEAD
 
         db.beginTransaction()
 
@@ -498,6 +580,13 @@ class DataBaseLITE(var context: Context) : SQLiteOpenHelper(context,DATABASE_NAM
         } finally {
             db.endTransaction()
         }
+=======
+        val result = db.insert(TABLE_RUTASEST, null, cv)
+        if (result == -1.toLong())
+            Toast.makeText(context, "Fallo al Insertar Ruta Estática", Toast.LENGTH_SHORT).show()
+        else
+            Toast.makeText(context, "Ruta Estática Insertada Correctamente", Toast.LENGTH_SHORT).show()
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
     }
 
     fun readDataRutaEst() : MutableList<RutasEst>{
@@ -523,6 +612,7 @@ class DataBaseLITE(var context: Context) : SQLiteOpenHelper(context,DATABASE_NAM
 
     fun updateDataRutaEst(rutaEst: RutasEst): Boolean {
         val db = this.writableDatabase
+<<<<<<< HEAD
         val auth = FirebaseAuth.getInstance()
         val email = auth.currentUser?.email
         val usuario = getUsuario(email!!)
@@ -579,6 +669,15 @@ class DataBaseLITE(var context: Context) : SQLiteOpenHelper(context,DATABASE_NAM
         }
 
         return true // Retornar true si ambas actualizaciones fueron exitosas
+=======
+        val contentValues = ContentValues()
+        contentValues.put(COL_IPDESTINO, rutaEst.ipDestino)
+        contentValues.put(COL_IPSALTO, rutaEst.ipSalto)
+        contentValues.put(COL_MASCARA, rutaEst.mascara)
+        contentValues.put(COL_DISPOSITIVO, rutaEst.dispositivo)
+        val result = db.update(TABLE_RUTASEST, contentValues, "ID = ?", arrayOf(rutaEst.id.toString()))
+        return result != -1
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
     }
 
     fun deleteDataRutaEst(id: Int): Int {
@@ -596,6 +695,7 @@ class DataBaseLITE(var context: Context) : SQLiteOpenHelper(context,DATABASE_NAM
         return exists
     }
 
+<<<<<<< HEAD
     //Funciones para EIGRP
     fun insertDataEigrp(eigrp : Eigrp, email: String) {
         val db = this.writableDatabase
@@ -1350,6 +1450,8 @@ class DataBaseLITE(var context: Context) : SQLiteOpenHelper(context,DATABASE_NAM
         return exists
     }
 
+=======
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
     //Funciones para Usuario
     fun insertDataUsuario(usuario: Usuario) {
         if (isEmailExist(usuario.emailUs)) {
@@ -1382,7 +1484,11 @@ class DataBaseLITE(var context: Context) : SQLiteOpenHelper(context,DATABASE_NAM
         if (result.moveToFirst()) {
             do {
                 val usuario = Usuario()
+<<<<<<< HEAD
                 usuario.id = result.getInt(result.getColumnIndexOrThrow(COL_ID))
+=======
+                usuario.id = result.getInt(result.getColumnIndexOrThrow(COL_ID)).toInt()
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
                 usuario.nombreUs = result.getString(result.getColumnIndexOrThrow(COL_NOMBRE))
                 usuario.apellidoUs = result.getString(result.getColumnIndexOrThrow(COL_APELLIDO))
                 usuario.emailUs = result.getString(result.getColumnIndexOrThrow(COL_EMAIL))
@@ -1438,6 +1544,7 @@ class DataBaseLITE(var context: Context) : SQLiteOpenHelper(context,DATABASE_NAM
         }
 
         result.close()
+<<<<<<< HEAD
         return usuario
     }
 
@@ -1461,6 +1568,9 @@ class DataBaseLITE(var context: Context) : SQLiteOpenHelper(context,DATABASE_NAM
         }
 
         result.close()
+=======
+        db.close()
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
         return usuario
     }
 
@@ -1473,6 +1583,7 @@ class DataBaseLITE(var context: Context) : SQLiteOpenHelper(context,DATABASE_NAM
         return exists
     }
 
+<<<<<<< HEAD
     fun getDispositivo(nombre: String): Dispositivo? {
         val db = this.readableDatabase
         val query = "SELECT * FROM $TABLE_DISPOSITIVO WHERE $COL_NOMBRE_DISPOSITIVO = ?"
@@ -1807,4 +1918,6 @@ class DataBaseLITE(var context: Context) : SQLiteOpenHelper(context,DATABASE_NAM
     }
 
 
+=======
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
 }

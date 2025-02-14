@@ -1,5 +1,6 @@
 package com.example.ciscog
 
+<<<<<<< HEAD
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
@@ -23,10 +24,20 @@ import com.google.firebase.auth.PhoneAuthOptions
 import com.google.firebase.auth.PhoneAuthProvider
 import com.google.firebase.auth.PhoneMultiFactorGenerator
 import java.util.concurrent.TimeUnit
+=======
+import android.content.Intent
+import android.os.Bundle
+import android.widget.Button
+import android.widget.TextView
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.auth.FirebaseAuth
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
 
 class UsuarioActivity : AppCompatActivity() {
     private var btnRutasEst: Button? = null
     private var btnNat: Button? = null
+<<<<<<< HEAD
     private var btnEigrp: Button? = null
     private var btnOspf: Button? = null
     private var btnVlan: Button? = null
@@ -34,16 +45,22 @@ class UsuarioActivity : AppCompatActivity() {
     private var btnAcl: Button? = null
     private var btnUsuario: Button? = null
     private var btnAutenticacion: AppCompatImageButton? = null
+=======
+    private var btnUsuario: Button? = null
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
     private var btnCerrarSesion: Button? = null
     private var tvNombreUsuario: TextView? = null
     private var tvCorreoUsuario: TextView? = null
 
     private lateinit var auth: FirebaseAuth
+<<<<<<< HEAD
     private lateinit var verificationId: String
     private var forceResendingToken: PhoneAuthProvider.ForceResendingToken? = null
     private lateinit var multiFactorSession: MultiFactorSession
 
     private lateinit var phone: String
+=======
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -62,6 +79,7 @@ class UsuarioActivity : AppCompatActivity() {
     private fun init(email: String, nombre: String, apellido: String) {
         btnNat = findViewById(R.id.btnNat)
         btnRutasEst = findViewById(R.id.btnRutasEst)
+<<<<<<< HEAD
         btnEigrp = findViewById(R.id.btnEigrp)
         btnOspf = findViewById(R.id.btnOspf)
         btnVlan = findViewById(R.id.btnVlans)
@@ -69,6 +87,9 @@ class UsuarioActivity : AppCompatActivity() {
         btnAcl = findViewById(R.id.btnAcls)
         btnUsuario = findViewById(R.id.btnUsuarios)
         btnAutenticacion = findViewById(R.id.btnMFA)
+=======
+        btnUsuario = findViewById(R.id.btnUsuarios)
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
         btnCerrarSesion = findViewById(R.id.cerrarSesion)
         tvCorreoUsuario = findViewById(R.id.correo_usuario)
         tvCorreoUsuario?.text = email
@@ -80,6 +101,11 @@ class UsuarioActivity : AppCompatActivity() {
         btnRutasEst?.setOnClickListener {
             val intent = Intent(this, ListaRutasEstReg::class.java).apply {
                 putExtra("email", email)
+<<<<<<< HEAD
+=======
+                putExtra("nombre", nombre)
+                putExtra("apellido", apellido)
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
             }
             startActivity(intent)
         }
@@ -95,6 +121,7 @@ class UsuarioActivity : AppCompatActivity() {
         btnNat?.setOnClickListener {
             val intent = Intent(this, ListaNatReg::class.java).apply {
                 putExtra("email", email)
+<<<<<<< HEAD
             }
             startActivity(intent)
         }
@@ -130,6 +157,10 @@ class UsuarioActivity : AppCompatActivity() {
         btnAcl?.setOnClickListener {
             val intent = Intent(this, ListaAclReg::class.java).apply {
                 putExtra("email", email)
+=======
+                putExtra("nombre", nombre)
+                putExtra("apellido", apellido)
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
             }
             startActivity(intent)
         }
@@ -141,6 +172,7 @@ class UsuarioActivity : AppCompatActivity() {
                 putExtra("apellido", apellido)
             }
             startActivity(intent)
+<<<<<<< HEAD
             finish()// Finaliza la actividad actual para evitar volver a ella con el botón de retroceso
         }
 
@@ -374,5 +406,10 @@ class UsuarioActivity : AppCompatActivity() {
                     Toast.makeText(this, "Error al activar MFA.", Toast.LENGTH_SHORT).show()
                 }
             }
+=======
+
+        }
+
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
     }
 }

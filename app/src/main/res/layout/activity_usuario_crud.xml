@@ -129,11 +129,19 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:background="@drawable/spinner_text_border"
+<<<<<<< HEAD
             android:paddingHorizontal="10dp"
             android:layout_marginHorizontal="10dp"
             android:layout_marginBottom="30dp"
             android:spinnerMode="dropdown"
             android:theme="@style/SpinnerTheme"/>
+=======
+            android:paddingHorizontal="20dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginBottom="30dp"
+            android:spinnerMode="dropdown"
+            android:popupTheme="@style/SpinnerTheme"/>
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
 
         <Button
             android:id="@+id/btn_anadir"

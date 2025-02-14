@@ -154,7 +154,10 @@
                     android:layout_marginTop="7dp"/>
 
                 <ImageButton
+<<<<<<< HEAD
                     android:id="@+id/chat_btn"
+=======
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_gravity="center"

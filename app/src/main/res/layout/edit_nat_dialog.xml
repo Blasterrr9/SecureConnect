@@ -76,8 +76,12 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="20dp"
+<<<<<<< HEAD
                 android:background="@drawable/spinner_text_border"
                 android:theme="@style/SpinnerTheme"/>
+=======
+                android:background="@drawable/spinner_text_border"/>
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
 
             <EditText
                 android:id="@+id/edittext_ippriv_dialog"
@@ -88,7 +92,10 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp"
+<<<<<<< HEAD
                 android:textStyle="bold"
+=======
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
                 android:padding="15dp"
                 android:maxLines="2"
                 android:maxLength="15"
@@ -101,7 +108,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/edit_ippub"
+<<<<<<< HEAD
                 android:textStyle="bold"
+=======
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
                 android:background="@drawable/edit_text_border"
                 android:layout_marginTop="10dp"
                 android:layout_marginStart="20dp"
@@ -128,8 +138,12 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="20dp"
+<<<<<<< HEAD
                 android:background="@drawable/spinner_text_border"
                 android:theme="@style/SpinnerTheme"/>
+=======
+                android:background="@drawable/spinner_text_border"/>
+>>>>>>> 836dac7 (Primer prototipo de la aplicación(recuperado))
 
         </LinearLayout>
 </LinearLayout>
