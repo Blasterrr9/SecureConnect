@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="chat_green">#0ea982</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="primary">#6917E5</color>
+    <color name="login">#9256ED</color>
+    <color name="purple">#9A06BF</color>
+    <color name="purple2">#6917E5</color>
+    <color name="cyan">#2292D1</color>
+    <color name="green">#098F33</color>
+    <color name="blue">#6672FF</color>
+    <color name="light_blue">#d3efff</color>
+    <color name="light_green">#3CE671</color>
+    <color name="gray">#505050</color>
+    <color name="editTexts">#F6F6F6</color>
+    <color name="red">#FF0000</color>
+    <color name="light_red">#FF3030</color>
+</resources>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <solid
+                android:color="@color/editTexts"/>
+
+            <corners
+                android:bottomRightRadius="12dp"
+                android:bottomLeftRadius="12dp"
+                android:topLeftRadius="12dp"
+                android:topRightRadius="12dp"/>
+            <stroke
+                android:color="@color/gray"
+                android:width="2dp"/>
+        </shape>
+    </item>
+    <item>
+        <inset
+            android:insetLeft="0dp"
+            android:insetRight="10dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp">
+            <bitmap
+                android:gravity="end|center_vertical"
+                android:src="@android:drawable/arrow_down_float"
+                android:tint="@color/gray"/>
+        </inset>
+    </item>
+</layer-list>

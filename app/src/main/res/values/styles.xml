@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="SpinnerTheme" parent="Theme.AppCompat.Light">
+        <!--<item name="android:spinnerDropDownItemStyle">@style/SpinnerDropDownItem</item> -->
+        <item name="android:padding">4dp</item> <!-- Para coincidir con el EditText -->
+        <!--<item name="android:layout_marginHorizontal">10dp</item>  Margen similar al EditText -->
+        <item name="android:textStyle">bold</item> <!-- Estilo de texto en negrita -->
+        <item name="android:textColor">@android:color/black</item> <!-- Color del texto -->
+    </style>
+
+
+</resources>
+

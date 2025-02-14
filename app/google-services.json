@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "691451321279",
+    "project_id": "connect-cbc7a",
+    "storage_bucket": "connect-cbc7a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:691451321279:android:6a204df404b8f37f4f1f0a",
+        "android_client_info": {
+          "package_name": "com.example.ciscog"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCTq8DggO0ZkBJvza72RfmdKlSQnAPP67Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

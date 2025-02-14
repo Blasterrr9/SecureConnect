@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+
+    <!-- <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> -->
+    <!-- <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> -->
+
+    <uses-feature android:name="android.hardware.telephony" android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.CiscoG"
+        tools:targetApi="31">
+        <activity
+            android:name=".ListaRutasEstReg"
+            android:exported="false" />
+        <activity
+            android:name=".ListaNatReg"
+            android:exported="false" />
+        <activity
+            android:name=".ListaEigrpReg"
+            android:exported="false" />
+        <activity
+            android:name=".ListaOspfReg"
+            android:exported="false" />
+        <activity
+            android:name=".ListaVlanReg"
+            android:exported="false" />
+        <activity
+            android:name=".ListaStpReg"
+            android:exported="false" />
+        <activity
+            android:name=".ListaAclReg"
+            android:exported="false" />
+        <activity
+            android:name=".ListaUsuarioReg"
+            android:exported="false" />
+        <activity
+            android:name=".ListaConfig"
+            android:exported="false" />
+        <activity
+            android:name=".ListaReporteReg"
+            android:exported="false" />
+        <activity
+            android:name=".ReporteCRUD"
+            android:exported="false" />
+        <activity
+            android:name=".ReportePlantilla3"
+            android:exported="false" />
+        <activity
+            android:name=".NatCRUD"
+            android:exported="false" />
+        <activity
+            android:name=".EigrpCRUD"
+            android:exported="false" />
+        <activity
+            android:name=".OspfCRUD"
+            android:exported="false" />
+        <activity
+            android:name=".VlanCRUD"
+            android:exported="false" />
+        <activity
+            android:name=".StpCRUD"
+            android:exported="false" />
+        <activity
+            android:name=".AclCRUD"
+            android:exported="false" />
+        <activity
+            android:name=".AdminActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UsuarioActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RutasEstCRUD"
+            android:exported="false" />
+        <activity
+            android:name=".UsuarioCRUD"
+            android:exported="false" />
+        <activity
+            android:name=".RespaldoLocal"
+            android:exported="false" />
+        <activity
+            android:name=".RespaldoNube"
+            android:exported="false" />
+        <activity
+            android:name=".ChatActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

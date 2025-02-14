@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:padding="10dp"
+    android:layout_margin="15dp"
+    app:cardElevation="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:background="@drawable/edit_text_dialog">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="INGRESAR CÓDIGO DE VERIFICACIÓN"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:textColor="@color/white"
+                android:background="@color/primary"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:gravity="center"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Enviado a: "
+                    android:textSize="12dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
+
+                <!-- Campo para visualizar el Email -->
+                <TextView
+                    android:id="@+id/textview_phone_dialog"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Número de Teléfono Registrado"
+                    android:layout_marginLeft="2dp"
+                    android:enabled="false"
+                    android:textSize="12dp"
+                    android:layout_gravity="center"
+                    android:textColor="@android:color/darker_gray"/>
+
+            </LinearLayout>
+
+
+            <EditText
+                android:id="@+id/edittext_phone_dialog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Código de 6 dígitos"
+                android:background="@drawable/edit_text_border"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:padding="15dp"
+                android:maxLines="1"
+                android:textStyle="bold"
+                android:maxLength="6"
+                android:digits="0123456789"
+                android:singleLine="true"
+                android:inputType="number"/>
+
+
+        </LinearLayout>
+</LinearLayout>
+
+</androidx.cardview.widget.CardView>

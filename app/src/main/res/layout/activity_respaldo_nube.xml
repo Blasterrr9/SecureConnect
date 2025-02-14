@@ -1,0 +1,188 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RespaldoNube">
+
+    <!-- Imagen final en el FrameLayout para mantenerla en la esquina inferior derecha -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="160dp"
+            android:layout_height="180dp"
+            android:src="@drawable/respaldo_nube_icon"
+            android:layout_gravity="end|bottom"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="0dp" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:background="@drawable/cuadro_azul"
+                    android:gravity="center">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@drawable/titulos_redondeados"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp">
+
+                        <ImageButton
+                            android:id="@+id/return_btn"
+                            android:layout_width="60dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center"
+                            android:padding="15dp"
+                            app:cornerRadius="40dp"
+                            android:src="@drawable/atras"
+                            android:contentDescription="@string/autentificacion_mf"
+                            android:scaleType="centerInside"
+                            android:background="@drawable/btn_redondeado"
+                            android:adjustViewBounds="true" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/lista_nube"
+                            android:textColor="@color/white"
+                            android:textSize="26sp"
+                            android:gravity="center"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        <!-- Sección de Respaldo de la BD -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:padding="16dp"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/base_nube"
+                android:padding="12dp"
+                app:cornerRadius="50dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="0dp"
+                android:layout_marginBottom="0dp"
+                android:background="@drawable/btn_redondeado_azul"/>
+
+
+            <Space
+                android:layout_width="30dp"
+                android:layout_height="0dp"/>
+
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:text="@string/nube_text"
+                android:textColor="@color/purple"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:padding="8dp"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnRespaldar"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:padding="12sp"
+            android:backgroundTint="@color/green"
+            app:icon="@drawable/correcto"
+            app:iconSize="40dp"
+            app:cornerRadius="15dp"
+            android:text="RESPALDAR"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:layout_gravity="center"
+            app:iconTint="#FFFFFF"/>
+
+        <TextView
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/nube_text1"
+            android:textColor="@color/purple"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:padding="0dp"
+            android:layout_marginTop="15dp"/>
+
+        <!--Email-->
+        <LinearLayout
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/email"
+                app:srcCompat="@drawable/link" />
+
+            <TextView
+                android:id="@+id/textLink"
+                android:background="@null"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:text="@string/nube_link"
+                android:textColor="@color/login"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textIsSelectable="true"
+                tools:ignore="TouchTargetSizeCheck" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="350dp"
+            android:layout_height="5dp"
+            android:background="@drawable/linea_guia"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center"/>
+
+        <ImageView
+            android:layout_width="220dp"
+            android:layout_height="120dp"
+            android:src="@drawable/nube_respaldo"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="0dp"/>
+
+
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

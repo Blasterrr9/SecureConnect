@@ -1,0 +1,118 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ListaReporteReg">
+
+    <!-- Imagen final en el FrameLayout para mantenerla en la esquina inferior derecha -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="160dp"
+            android:layout_height="180dp"
+            android:src="@drawable/reportes_bg"
+            android:layout_gravity="end|bottom"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="0dp" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:background="@drawable/cuadro_azul"
+                    android:gravity="center">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@drawable/titulos_redondeados"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp">
+
+                        <ImageButton
+                            android:id="@+id/return_btn"
+                            android:layout_width="60dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center"
+                            android:padding="15dp"
+                            app:cornerRadius="40dp"
+                            android:src="@drawable/atras"
+                            android:contentDescription="@string/autentificacion_mf"
+                            android:scaleType="centerInside"
+                            android:background="@drawable/btn_redondeado"
+                            android:adjustViewBounds="true" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/lista_reportes"
+                            android:textColor="@color/white"
+                            android:textSize="30sp"
+                            android:gravity="center"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Barra de búsqueda -->
+                <androidx.appcompat.widget.SearchView
+                    android:id="@+id/searchview_reporte"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:background="@color/light_blue"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_marginTop="20dp"
+                    android:visibility="visible"
+                    android:iconifiedByDefault="false"
+                    app:queryHint="Buscar código del registro" />
+
+                <!-- Lista NAT -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerview_reporte"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:scrollbars="vertical" />
+
+                <!-- Botón registrar -->
+                <Button
+                    android:id="@+id/registrar_btn"
+                    android:layout_width="200dp"
+                    android:layout_height="70dp"
+                    android:text="CREAR"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    app:cornerRadius="20dp"
+                    android:backgroundTint="@color/green"
+                    android:layout_marginTop="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="180dp"
+                    app:icon="@drawable/btn_registrar_icon"
+                    app:iconSize="35dp" />
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

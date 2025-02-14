@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ReporteCRUD">
+
+    <!-- Imagen final en el FrameLayout para mantenerla en la esquina inferior derecha -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="160dp"
+            android:layout_height="180dp"
+            android:src="@drawable/reportes_bg"
+            android:layout_gravity="end|bottom"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="0dp" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:background="@drawable/cuadro_azul"
+            android:gravity="center">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/titulos_redondeados"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+                <ImageButton
+                    android:id="@+id/return_btn"
+                    android:layout_width="60dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:padding="15dp"
+                    app:cornerRadius="40dp"
+                    android:src="@drawable/atras"
+                    android:contentDescription="@string/autentificacion_mf"
+                    android:scaleType="centerInside"
+                    android:background="@drawable/btn_redondeado"
+                    android:adjustViewBounds="true" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="GENERAR REPORTES"
+                    android:textColor="@color/white"
+                    android:textSize="30sp"
+                    android:gravity="center"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/edit_tipo"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="5dp"/>
+
+        <Spinner
+            android:id="@+id/spinner_tipo_reporte"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@drawable/spinner_text_border"
+            android:paddingHorizontal="20dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginBottom="30dp"
+            android:spinnerMode="dropdown"
+            android:popupTheme="@style/SpinnerTheme"/>
+
+
+        <Button
+            android:id="@+id/btn_anadir"
+            android:layout_width="200dp"
+            android:layout_height="70dp"
+            android:text="CREAR"
+            android:backgroundTint="@color/green"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            app:icon="@drawable/btn_registrar_icon"
+            app:iconSize="40dp"/>
+
+
+
+    </LinearLayout>
+
+</FrameLayout>

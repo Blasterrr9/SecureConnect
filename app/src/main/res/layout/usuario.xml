@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UsuarioActivity">
+
+    <!-- Cuadro morado-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="360dp"
+        android:background="@drawable/cuadro_azul" />
+
+    <!-- Contenido del layout-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <Button
+            android:id="@+id/cerrarSesion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:backgroundTint="@color/white"
+            android:text="@string/cerrar_sesion"
+            android:padding="10dp"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:cornerRadius="15dp"
+            app:icon="@drawable/unlock"
+            app:iconGravity="start"
+            app:iconSize="15dp"
+            app:iconTint="@color/black"
+            tools:ignore="RtlSymmetry" />
+        <Space
+            android:layout_width="20sp"
+            android:layout_height="15sp"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            app:srcCompat="@drawable/usuario_icono_inicio" />
+
+        <TextView
+            android:id="@+id/nombre_usuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="Nombre de usuario"
+            android:paddingTop="10dp"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/correo_usuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="usuario@gmail.com"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:textSize="20sp"/>
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/cuadro_negro"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/btnMFA"
+                android:layout_width="wrap_content"
+                android:layout_height="98dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:padding="15dp"
+                app:cornerRadius="40dp"
+                android:src="@drawable/identificacion"
+                android:contentDescription="@string/autentificacion_mf"
+                android:scaleType="centerInside"
+                android:background="@drawable/btn_redondeado"
+                android:adjustViewBounds="true" />
+            <TextView
+                android:layout_width="match_parent"
+                android:paddingTop="5sp"
+                android:paddingBottom="5sp"
+                android:layout_height="wrap_content"
+                android:text="@string/autentificacion_mf"
+                android:textColor="@color/white"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:columnCount="2"
+            android:rowCount="4"
+            android:useDefaultMargins="true">
+            <!-- Botones row 1-->
+            <Button
+                android:id="@+id/btnUsuarios"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:layout_columnWeight="1"
+                android:backgroundTint="@color/white"
+                android:text="@string/btn_usuarios"
+                android:textColor="@color/black"
+                app:icon="@drawable/usuarios_icon"
+                app:iconSize="40dp"
+                app:iconTint="@color/black"
+                app:strokeColor="@color/black"
+                app:strokeWidth="2dp" />
+            <Button
+                android:id="@+id/btnEigrp"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:text="@string/btn_eigrp"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/white"
+                app:strokeColor="@color/black"
+                app:strokeWidth="2dp"
+                app:icon="@drawable/eigrp_icon"
+                app:iconSize="40dp"
+                app:iconTint="@color/black"
+                android:layout_columnWeight="1"/>
+            <!-- Botones row 2-->
+            <Button
+                android:id="@+id/btnAcls"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_row="1"
+                android:layout_column="0"
+                android:text="@string/btn_acls"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/white"
+                app:strokeColor="@color/black"
+                app:strokeWidth="2dp"
+                app:icon="@drawable/acls_icon"
+                app:iconSize="40dp"
+                app:iconTint="@color/black"
+                android:layout_columnWeight="1"/>
+            <Button
+                android:id="@+id/btnRutasEst"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_row="1"
+                android:layout_column="1"
+                android:text="@string/btn_rutasEstaticas"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/white"
+                app:strokeColor="@color/black"
+                app:strokeWidth="2dp"
+                app:icon="@drawable/rutas_est_icon"
+                app:iconSize="40dp"
+                app:iconTint="@color/black"
+                android:layout_gravity="center_vertical"
+                android:layout_columnWeight="1"/>
+            <!-- Botones row 3-->
+            <Button
+                android:id="@+id/btnVlans"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_row="2"
+                android:layout_column="0"
+                android:text="@string/btn_vlans"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/white"
+                app:strokeColor="@color/black"
+                app:strokeWidth="2dp"
+                app:icon="@drawable/vlans_icon"
+                app:iconSize="40dp"
+                app:iconTint="@color/black"
+                android:layout_columnWeight="1"/>
+            <Button
+                android:id="@+id/btnStp"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_row="2"
+                android:layout_column="1"
+                android:text="@string/btn_stp"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/white"
+                app:strokeColor="@color/black"
+                app:strokeWidth="2dp"
+                app:icon="@drawable/stp_icon"
+                app:iconSize="40dp"
+                app:iconTint="@color/black"
+                android:layout_columnWeight="1"/>
+            <!-- Botones row 4-->
+            <Button
+                android:id="@+id/btnOspf"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_row="3"
+                android:layout_column="0"
+                android:text="@string/btn_ospf"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/white"
+                app:strokeColor="@color/black"
+                app:strokeWidth="2dp"
+                app:icon="@drawable/ospf_icon"
+                app:iconSize="40dp"
+                app:iconTint="@color/black"
+                android:layout_columnWeight="1"/>
+            <Button
+                android:id="@+id/btnNat"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_row="3"
+                android:layout_column="1"
+                android:text="@string/btn_nat"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/white"
+                app:strokeColor="@color/black"
+                app:strokeWidth="2dp"
+                app:icon="@drawable/nat_icon"
+                app:iconSize="40dp"
+                app:iconTint="@color/black"
+                android:layout_columnWeight="1"/>
+
+        </GridLayout>
+
+    </LinearLayout>
+</FrameLayout>
